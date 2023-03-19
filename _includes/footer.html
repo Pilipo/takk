@@ -1,0 +1,19 @@
+<div class="footer ">
+    <div class="left-footer">
+        &nbsp;
+    </div>
+    <div class="center-footer">
+        <div class="text-light">&copy; {{ "now" | date: "%Y" }} - Takk Treats</div>
+    </div>
+    <div class="right-footer">
+        Social
+    </div>
+</div>
+
+<!-- JS Plugins -->
+{% for js in site.data.plugins.js %}
+<script src="{{ js | relative_url }}"></script>
+{% endfor %}
+
+<!-- Main Script -->
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
