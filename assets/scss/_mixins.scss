@@ -27,3 +27,8 @@
 @mixin size($size){
   width: $size; height: $size;
 }
+
+@mixin wrapper {
+  margin: auto;
+  width: 66%;
+}
