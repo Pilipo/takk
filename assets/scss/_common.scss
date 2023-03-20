@@ -71,18 +71,3 @@ body {
   align-items: center;
   padding: 10% 5%;
 }
-
-.left-footer {
-  grid-column: 1;
-  justify-self: left;
-}
-
-.center-footer {
-  grid-column: 2;
-  justify-self: center;
-}
-
-.right-footer {
-  grid-column: 3;
-  justify-self: right;
-}
