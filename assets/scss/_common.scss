@@ -5,6 +5,15 @@ body {
   background-color: #fff;
 }
 
+h6 {
+  font-family: 'Prata', serif;
+  font-weight: 600;
+  font-display: fallback;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+
 .header {
   display: flex;
   justify-content: center;
@@ -53,7 +62,31 @@ body {
   padding: 2em;
 }
 
-.about-content h1 {
+.about-content h3 {
+  font-family: 'Prata', serif;
+  font-weight: 600;
+  font-display: fallback;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.welcome img {
+  width: 400px;
+  height: 400px;
+}
+
+.welcome-wrapper {
+  width: 900px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.welcome-wrapper .item {
+  padding: 15px;
+  justify-self: center;
+}
+
+.welcome-wrapper h3{
   font-family: 'Prata', serif;
   font-weight: 600;
   font-display: fallback;
