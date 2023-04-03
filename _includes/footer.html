@@ -6,7 +6,11 @@
         <div class="section">
             <div class="d-flex justify-content-between">
                 <div>
-                    <p class="text-white paragraph-md font-secondary">{{ site.data.settings.email }}</p>
+                    <p id="copy-input" class="text-white paragraph-md font-secondary"
+                        value="{{ site.data.settings.email }}">{{ site.data.settings.email }}</p>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
+                            Copy Email
+                        </a>
                 </div>
                 <div>
                     <p class="text-white paragraph-md font-secondary">{{ site.data.settings.phone }}</p>
@@ -27,6 +31,9 @@
 {% for js in site.data.plugins.js %}
 <script src="{{ js | relative_url }}"></script>
 {% endfor %}
+
+<!-- Popper.js Fix -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
 
 <!-- Main Script -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
