@@ -10,9 +10,9 @@ phone: working on it
 address: Nashville, TN
 
 menu:
-  - { name: About, link: "/about" }
-  - { name: Cakes, link: "/cakes" }
-  - { name: Contact, link: "/contact" }
+  - { name: Home, link: "/" }
+  - { name: About Me, link: "/about.html" }
+  - { name: Contact Us, link: "/contact.html" }
 
 #-------------------------------
 # Google Analytics Section
