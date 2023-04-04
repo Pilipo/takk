@@ -1,19 +1,14 @@
 <!-- TODO: fonts need a look -->
-<!-- TODO: phone number - add or toss teh section -->
-<!-- TODO: add social icons -->
 <div class="footer">
     <div class="footer-wrapper">
         <div class="section">
             <div class="d-flex justify-content-between">
                 <div>
-                    <p id="copy-input" class="text-white paragraph-md font-secondary"
-                        value="{{ site.data.settings.email }}">{{ site.data.settings.email }}</p>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
-                            Copy Email
-                        </a>
+                    <p id="copy-email" class="text-white paragraph-md font-secondary">{{ site.data.settings.email }}</p>
                 </div>
                 <div>
-                    <p class="text-white paragraph-md font-secondary">{{ site.data.settings.phone }}</p>
+                    <!-- TODO: Phone? -->
+                    <!-- <p class="text-white paragraph-md font-secondary">{{ site.data.settings.phone }}</p> -->
                 </div>
                 <div>
                     <p class="text-white paragraph-md font-secondary">{{ site.data.settings.address }}</p>
@@ -22,7 +17,8 @@
         </div>
         <div class="border-top text-center border-dark py-5">
             <p class="mb-0 text-light">&copy; {{ "now" | date: "%Y" }} - Takk Treats</p>
-            <p class="mb-0 text-light">Social coming</p>
+            <!-- TODO: social -->
+            <!-- <p class="mb-0 text-light">Social coming</p> -->
         </div>
     </div>
 </div>
