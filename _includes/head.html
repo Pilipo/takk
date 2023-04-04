@@ -1,20 +1,24 @@
 <head>
     <meta charset="utf-8">
-    <title>{{ site.data.settings.title }}</title>
+    <title>{{ site.data.settings.title }} - 
+    {% for item in site.data.settings.menu %}
+    {% if page.url == item.link %}{{ item.name }}{% endif %}
+    {% endfor %}
+    </title>
     
     <!-- ** Plugins Needed for the Project ** -->
     {% for css in site.data.plugins.css %}
-    <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
+    <link rel=" stylesheet" href="{{ css | relative_url }}">
+        {% endfor %}
 
-    <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
+        <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-    <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
+        <!--Favicon-->
+        <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
+        <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
 
-    <!-- google analytics -->
-    {% if site.data.settings.google-analytics %}
-    {% include google-analytics.html %}
-    {% endif %}
+        <!-- google analytics -->
+        {% if site.data.settings.google-analytics %}
+        {% include google-analytics.html %}
+        {% endif %}
 </head>
