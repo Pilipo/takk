@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  @include media('<=small-phone') {
+    height: 200px;
+  }
 }
 
 .layer {

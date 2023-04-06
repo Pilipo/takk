@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ site.data.settings.title }} -
         {% for item in site.data.settings.menu %}
         {% if page.url == item.link %}{{ item.name }}{% endif %}
@@ -11,6 +12,7 @@
     <link rel=" stylesheet" href="{{ css | relative_url }}">
     {% endfor %}
 
+    <!-- custom style loads last -->
     <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
 
     <!--Favicon-->
