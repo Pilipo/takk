@@ -16,10 +16,6 @@ nav {
   opacity: 0.75;
 
   @include media('<=phone') {
-    font-size: 4vw;
-  }
-
-  @include media('<=small-phone') {
     font-size: 3vw;
   }
 }
