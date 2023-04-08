@@ -32,18 +32,28 @@ body {
   width: 400px;
   object-fit: cover;
   object-position: center 75%;
+
   @include media('<=small-phone') {
     width: 150px;
     height: 150px;
+  }
+
+  @include media('>small-phone', '<=phone') {
+    width: 230px;
+    height: 230px;
+  }
+
+  @include media('<=tablet') {
     display: flex;
     align-self: center;
     margin: auto;
   }
+
 }
 
 .page-content {
   margin-left: 30px;
-  @include media('<=small-phone') {
+  @include media('<=phone') {
     margin: 0;
   }
   display: flex;
@@ -90,11 +100,10 @@ body {
   padding: 15px;
 }
 
-@include media('>small-phone') {
+@include media('>phone') {
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    
   }
 
   .wrapper .item {
@@ -112,7 +121,7 @@ body {
 }
 
 .footer-wrapper {
-  @include wrapper;
+  // @include wrapper;
   display: grid;
   align-items: center;
   padding: 10% 5%;
