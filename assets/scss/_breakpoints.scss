@@ -33,10 +33,6 @@
 /// @example scss - Creates a single breakpoint with the label `phone`
 ///  $breakpoints: ('phone': 320px);
 ///
-/// TODO: build for small-phone to phone
-/// TODO: build for phone to tablet
-/// TODO: build for tablet to desktop
-/// TODO: build for desktop up
 $breakpoints: (
   'small-phone': 320px,
   'phone': 576px,
