@@ -88,26 +88,50 @@ body {
 }
 
 .contact-wrapper {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  max-width: 800px;
+  width: 100%;
   margin: auto;
+  padding: 30px;
+}
+
+.contact-wrapper .item {
+  padding: 15px;
+}
+
+@include media('>small-phone') {
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .contact-wrapper .item {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .contact-wrapper .item-title {
+    grid-column: 1 / 3;
+  }
 }
 
 .contact-image img {
+  height: 400px;
+  width: 400px;
   object-fit: cover;
   object-position: center 75%;
-  height: 600px;
-  width: 400px;
-  @include media('<desktop') {
-    height: 150px;
-    width: 100px;
+  @include media('<=small-phone') {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    align-self: center;
+    margin: auto;
   }
 }
 
 .contact-content {
   margin-left: 30px;
+  @include media('<=small-phone') {
+    margin: 0;
+  }
   display: flex;
   align-items: center;
   flex-wrap: wrap;
