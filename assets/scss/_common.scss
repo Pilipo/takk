@@ -27,32 +27,6 @@ body {
   background-color: #eff1f5;
 }
 
-.about-wrapper {
-  width: 100%;
-  margin: auto;
-  padding: 30px;
-}
-
-.about-wrapper .item {
-  padding: 15px;
-}
-
-@include media('>small-phone') {
-  .about-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .about-wrapper .item {
-    justify-self: end;
-    align-self: center;
-  }
-
-  .about-wrapper .item-title {
-    grid-column: 1 / 3;
-  }
-}
-
 .about-image img {
   height: 400px;
   width: 400px;
@@ -67,7 +41,7 @@ body {
   }
 }
 
-.about-content {
+.page-content {
   margin-left: 30px;
   @include media('<=small-phone') {
     margin: 0;
@@ -87,32 +61,6 @@ body {
   background-color: #eff1f5;
 }
 
-.contact-wrapper {
-  width: 100%;
-  margin: auto;
-  padding: 30px;
-}
-
-.contact-wrapper .item {
-  padding: 15px;
-}
-
-@include media('>small-phone') {
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .contact-wrapper .item {
-    justify-self: end;
-    align-self: center;
-  }
-
-  .contact-wrapper .item-title {
-    grid-column: 1 / 3;
-  }
-}
-
 .contact-image img {
   height: 400px;
   width: 400px;
@@ -127,20 +75,6 @@ body {
   }
 }
 
-.contact-content {
-  margin-left: 30px;
-  @include media('<=small-phone') {
-    margin: 0;
-  }
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  justify-content: flex-start;
-  padding: 2em;
-}
-
 .welcome img {
   width: 400px;
   height: 400px;
@@ -152,29 +86,29 @@ body {
   }
 }
 
-.welcome-wrapper {
-  width: 100%;
+.wrapper {
+  max-width: 940px;
   margin: auto;
   padding: 30px;
 }
 
-.welcome-wrapper .item {
+.wrapper .item {
   padding: 15px;
 }
 
 @include media('>small-phone') {
-  .welcome-wrapper {
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     
   }
 
-  .welcome-wrapper .item {
+  .wrapper .item {
     justify-self: end;
     align-self: center;
   }
 
-  .welcome-wrapper .item-title {
+  .wrapper .item-title {
     grid-column: 1 / 3;
   }
 }
