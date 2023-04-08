@@ -17,6 +17,14 @@
   @include media('<=small-phone') {
     height: 200px;
   }
+
+  @include media('>small-phone', "<=phone") {
+    height: 300px;
+  }
+
+  @include media('>phone', "<=tablet") {
+    height: 500px;
+  }
 }
 
 .layer {

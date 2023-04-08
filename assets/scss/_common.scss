@@ -5,50 +5,51 @@ body {
   background-color: #fff;
 }
 
-.header {
+// WRAPPER STYLES
+
+.wrapper {
+  max-width: 940px;
+  margin: auto;
+  padding: 30px;
+}
+
+.wrapper .item {
+  padding: 15px;
+}
+
+@include media('>tablet') {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .wrapper .item {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .wrapper .item-title {
+    grid-column: 1 / 3;
+  }
+}
+
+.wrapper img {
+  width: 400px;
+  height: 400px;
   display: flex;
-  justify-content: center;
-  margin-top: 35px;
-}
+  margin: auto;
+  border: 10px solid #8abee2;
 
-.logo-block {
-  width: 140px;
-  height: 140px;
-}
-
-.logo-image {
-  width: 140px;
-  height: 140px;
+  @include media('<=tablet') {
+    width: 90%;
+    height: 90%;
+  }
 }
 
 .page-section {
   width: 100%;
   padding: 40px 0;
   background-color: #eff1f5;
-}
-
-.about-image img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  object-position: center 75%;
-
-  @include media('<=small-phone') {
-    width: 150px;
-    height: 150px;
-  }
-
-  @include media('>small-phone', '<=phone') {
-    width: 230px;
-    height: 230px;
-  }
-
-  @include media('<=tablet') {
-    display: flex;
-    align-self: center;
-    margin: auto;
-  }
-
 }
 
 .page-content {
@@ -65,56 +66,59 @@ body {
   padding: 2em;
 }
 
+// HEADER & LOGO STYLES
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.logo-block {
+  width: 140px;
+  height: 140px;
+}
+
+.logo-image {
+  width: 140px;
+  height: 140px;
+}
+
+// CONTACT STYLES
+
 .contact-image img {
   height: 500px;
   width: 400px;
+  display: flex;
+  margin: auto;
   object-fit: cover;
   object-position: center 75%;
-  @include media('<=small-phone') {
-    width: 150px;
-    height: 200px;
-    display: flex;
-    align-self: center;
-    margin: auto;
+  align-self: center;
+
+  @include media('<=tablet') {
+    width: 90%;
+    height: 90%;
   }
 }
 
-.welcome img {
-  width: 400px;
+// ABOUT STYLES
+
+.about-section img {
   height: 400px;
+  width: 400px;
   display: flex;
-  @include media('<=small-phone') {
-    width: 150px;
-    height: 150px;
-    margin: auto;
-  }
-}
-
-.wrapper {
-  max-width: 940px;
   margin: auto;
-  padding: 30px;
-}
+  object-fit: cover;
+  object-position: center 75%;
+  align-self: center;
 
-.wrapper .item {
-  padding: 15px;
-}
-
-@include media('>phone') {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .wrapper .item {
-    justify-self: end;
-    align-self: center;
-  }
-
-  .wrapper .item-title {
-    grid-column: 1 / 3;
+  @include media('<=tablet') {
+    width: 90%;
+    height: 90%;
   }
 }
+
+// FOOTER STYLES
 
 .footer {
   background-color: $text-color;
